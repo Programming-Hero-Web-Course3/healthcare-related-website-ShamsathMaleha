@@ -9,6 +9,9 @@ import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
 import Appointment from './components/Appointment/Appointment';
 import AuthProvider from './components/context/AuthProvider';
+import NotFound from './components/NotFound/NotFound';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+// import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -29,7 +32,7 @@ function App() {
 
         </Contact>
        </Route>
-       <Route exact path="/signin">
+       <Route exact path="/login">
         <Signin>
 
         </Signin>
@@ -39,15 +42,21 @@ function App() {
 
         </Register>
        </Route>
-       <Route exact path="/appointment">
+       <PrivateRoute exact path="/appointment/:appId">
         <Appointment>
 
         </Appointment>
-       </Route>
+       </PrivateRoute>
+       <Route path="*">
+       <NotFound>
+
+       </NotFound>
+     </Route>
      </Switch>
      <Footer>
        
      </Footer>
+    
      </BrowserRouter>
    </AuthProvider>
     </div>

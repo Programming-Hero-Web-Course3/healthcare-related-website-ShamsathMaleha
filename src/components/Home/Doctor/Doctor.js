@@ -1,10 +1,17 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import './Doctor.css'
 
 const Doctor = (props) => {
-    const {img,name,visit, speciality} = props.doctor
-   
+    const {id,img,name,visit, speciality} = props.doctor
+    const history = useHistory();
+
+    const uri = `/appointment/${id}`;
+    const handleAppointment =()=>{
+        history.push(uri)
+    }
+
     return (
         <div className="doctor-card">
             <Col>
@@ -18,7 +25,7 @@ const Doctor = (props) => {
           <Card.Text>
         Visit fee: {visit} .BDT
           </Card.Text>
-          <button type="button" className="btn btn-success" >Appointment</button>
+          <button onClick={handleAppointment} type="button" className="btn btn-success" >Appointment</button>
         </Card.Body>
       </Card>
     </Col>

@@ -1,41 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 import './Register.css'
 
 const Register = () => {
+    const {handlePassword,handleEmail,handleregistration}=useAuth()
+  
     return (
-        <div  className="d-flex justify-content-center h-75 mb-5 mt-5 pt-5 pb-5 register">
-             <form >
-    <h1>Register</h1>
+        
 
-<div className="form-group">
-    <label>First name</label>
-    <input type="text" className="form-control" placeholder="First name" />
+<div>
+
+<div class="form">
+  
+  
+                             
+  <form onSubmit={handleregistration}>
+      <h1>Register</h1>
+ 
+  <input onBlur={handleEmail} required type="email" name="email" className=" mb-3 mx-auto inputs" placeholder="Email" /> 
+     <input onBlur={handlePassword} required type="password" className=" mx-auto inputs" name="Password" placeholder="Password" />
+  
+   
+     <button type="submit" className="buttons">Sign in</button>
+  </form>
+  
+  <br />
+     <Link to="/login">Already Registered?</Link>
+  
+        
+  </div>
 </div>
 
-<div className="form-group">
-    <label>Last name</label>
-    <input type="text" className="form-control" placeholder="Last name" />
-</div>
-
-<div className="form-group">
-    <label>Email</label>
-    <input type="email" className="form-control" placeholder="Enter email" />
-</div>
-
-<div className="form-group mb-3">
-    <label>Password</label>
-    <input type="password" className="form-control" placeholder="Enter password" />
-</div>  
-
-<button type="submit" className="btn btn-success btn-lg btn-block">Register</button>
-<p className="mt-2 text-right">
-    Already registered <Link to="/signin">log in?</Link>
-</p>
-</form>
-
-
-        </div>
     );
 };
 

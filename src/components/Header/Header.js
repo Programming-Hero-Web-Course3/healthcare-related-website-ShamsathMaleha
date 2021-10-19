@@ -4,6 +4,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt , faClinicMedical} from '@fortawesome/free-solid-svg-icons'
+import useAuth from '../hooks/useAuth';
 
 
 
@@ -11,6 +12,7 @@ const signUp = <FontAwesomeIcon icon={faSignInAlt} />
 const medic = <FontAwesomeIcon icon={faClinicMedical} />
 
 const Header = () => {
+  const {user,logOut} = useAuth()
     return (
         <div>
             <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -27,8 +29,12 @@ const Header = () => {
      
     </Nav>
     <Nav>
-     <Nav.Link as={HashLink} to="/signin" >Login</Nav.Link>
+     <Nav.Link as={HashLink} to="/login" >Login</Nav.Link>
      <Nav.Link as={HashLink} to="/register" className="header-button">Sign up {signUp}</Nav.Link>
+     {
+         user?.email && <button   onClick={logOut}  className="header-button">Sign out {signUp}</button>
+
+     }
       
     </Nav>
   </Navbar.Collapse>
