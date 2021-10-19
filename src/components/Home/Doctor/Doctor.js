@@ -23,7 +23,7 @@ const Doctor = (props) => {
         <h4> {speciality} </h4>
           </Card.Text>
           <Card.Text>
-        Visit fee: {visit} .BDT
+        Visit fee: {visit}.BDT
           </Card.Text>
           <button onClick={handleAppointment} type="button" className="btn btn-success" >Appointment</button>
         </Card.Body>

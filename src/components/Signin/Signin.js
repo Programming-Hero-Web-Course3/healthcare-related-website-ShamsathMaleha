@@ -6,6 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 import useAuth from '../hooks/useAuth';
 import { Form } from 'react-bootstrap';
+import {  getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import { useState } from 'react';
+
+
 
 
 const sign = <FontAwesomeIcon icon={faSignInAlt} />
@@ -13,12 +17,45 @@ const sign = <FontAwesomeIcon icon={faSignInAlt} />
 
 
 const Signin = () => {
-    const {signInUsingGoogle,handlePassword,
-        handleEmail,signInWithEmail}= useAuth();
+    const {signInUsingGoogle,handlePassword,handleEmail,email,password}= useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/';
+    const [error, setError]= useState('');
+    const [loading, setLoading] = useState(true)
+    const [user, setUser]= useState({});
+    // const [password, setPassword]= useState('');
+    
+    const auth = getAuth();
 
+          
+    const processLogin=(email,password)=>{
+    //     setLoading(true)
+    //     signInWithEmailAndPassword(auth, email, password)
+    //     .then(result=>{
+    //       setUser(result.user);
+    //       console.log(user)
+    //       setError('')
+    //     })
+    //     .catch(error=>{
+    //       setError(error.message)
+    //       console.log(error.message)
+    //   })
+    //   .finally(()=>{setLoading(false)});
+      }
+   
+    const signInWithEmail = e =>{
+       
+        if (password.length < 6) {
+            setError('Please at least 6 or more character as password')
+        }
+        else {
+
+        // processLogin(email,password)
+     
+    }
+    e.preventDefault();
+    }
 
     const handleGoogleLogin = () => {
         signInUsingGoogle()
@@ -27,13 +64,30 @@ const Signin = () => {
                 
             })
     }
-    const handleEmailLogin = () => {
-        signInWithEmail()
-            .then(result => {
-                history.push(redirect_uri);
-                
+    const handleEmailLogin = (e) => {
+        e.preventDefault();
+        // signInWithEmail(e.target.password)
+            // .then(result => {
+            //     history.push(redirect_uri);
+            // processLogin(e.target.email.value,e.target.password.value)
+            // })
+            setLoading(true)
+            signInWithEmailAndPassword(auth, email,password)
+            .then(result=>{
+              setUser(result.user);
+              console.log(user)
+              setError('')
+              e.target.reset()
+              history.push(redirect_uri)
             })
+            .catch(error=>{
+              setError(error.message)
+              console.log(error.message)
+          })
+          .finally(()=>{setLoading(false)})
+            
     }
+
     return (
        
 
@@ -45,9 +99,9 @@ const Signin = () => {
                              
 <form onSubmit={handleEmailLogin}>
     <h1>Log in</h1>
-<input onChange={handleEmail} required type="email" name="email" className="mt-5 mb-3 mx-auto inputs" placeholder="Email" />
+<input onBlur={handleEmail} required type="email" name="email" className="mt-5 mb-3 mx-auto inputs" placeholder="Email" />
    
-   <input required onChange={handlePassword} type="password" className=" mx-auto inputs" name="Password" placeholder="Password" />
+   <input required onBlur={handlePassword} type="password" className=" mx-auto inputs" name="Password" placeholder="Password" />
  
    <button type="submit" className="buttons">Sign in</button>
 </form>

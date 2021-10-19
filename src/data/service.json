@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "name": "Cardiac Treatment",
+        "description": "React is a free and open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
+        "img": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80"
+    },
+    {
+        "id": 2,
+        "name": "Emergency Unit",
+        "description": "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members",
+        "img": "./image/services/emergency.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Nefrology Unit",
+        "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+        "img": "./image/services/nefrology.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Pediatric Diagnosis",
+        
+        "description": "Express.js, or simply Express, is a back end web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js",
+        "img": "./image/services/pediatric.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Outpatient Surgery",
+        
+        "description": "AngularJS is a JavaScript-based open-source front-end web framework for developing single-page applications. It is maintained mainly by Google and a community of individuals and corporations",
+        "img": "./image/services/outpatient.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Gynaecological Wings",
+        
+        "description": "Nuxt.js is a free and open source web application framework based on Vue.js, Node.js, Webpack and Babel.js. Nuxt is inspired by Next.js, which is a framework of similar purpose, based on React.js. The framework is advertised as a meta-framework for universal applications",
+        "img": ".././image/services/gynocology.jpg"
+    }
+    
+   
+]

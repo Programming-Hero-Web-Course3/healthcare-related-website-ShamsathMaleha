@@ -1,10 +1,19 @@
+
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import './Service.css'
 
 const Service = (props) => {
-    const {img,name,description} = props.service
-   
+    const {img,name,id} = props.service
+    const history = useHistory();
+
+    
+
+    const uris = `/details/${id}`;
+    const handleDetails =()=>{
+        history.push(uris)
+    }
     return (
         <div className="service-card" >
       <Col >
@@ -13,7 +22,7 @@ const Service = (props) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>
-         {description}
+         <button type="button" onClick={handleDetails}>Details</button>
           </Card.Text>
         </Card.Body>
       </Card>

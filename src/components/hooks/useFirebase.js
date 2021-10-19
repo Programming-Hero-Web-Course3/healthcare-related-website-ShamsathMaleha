@@ -38,37 +38,12 @@ const useFirebase =()=>{
             const user = result.user;
             setError('')
            
-            }) 
+            })   
     
        .catch(error=>{
            setError(error.message)
        })
       }
-      
-    const processLogin=(email,password)=>{
-        signInWithEmailAndPassword(auth, email, password)
-        .then(result=>{
-          const user = result.user;
-          console.log(user)
-          setError('')
-        })
-        .catch(error=>{
-          setError(error.message)
-      })
-    //   .finally(()=>{setLoading(false)});
-      }
-   
-    const signInWithEmail = e =>{
-        e.preventDefault();
-        if (password.length < 6) {
-            setError('Please at least 6 or more character as password')
-        }
-        else {
-
-        processLogin(email,password)
-     
-    }
-    }
 
 
     
@@ -142,7 +117,8 @@ const useFirebase =()=>{
       error,
       loading,
       handleregistration,
-      signInWithEmail,
+      email,
+      password,
       signInUsingGoogle,
       handlePassword,
       handleEmail,

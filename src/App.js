@@ -11,6 +11,7 @@ import Appointment from './components/Appointment/Appointment';
 import AuthProvider from './components/context/AuthProvider';
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Details from './components/Details/Details';
 // import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
@@ -27,11 +28,11 @@ function App() {
 
         </Home>
        </Route>
-       <Route exact path="/contact">
+       <PrivateRoute exact path="/contact">
         <Contact>
 
         </Contact>
-       </Route>
+       </PrivateRoute>
        <Route exact path="/login">
         <Signin>
 
@@ -47,6 +48,11 @@ function App() {
 
         </Appointment>
        </PrivateRoute>
+       <Route exact path="/details/:sId">
+        <Details>
+
+        </Details>
+       </Route>
        <Route path="*">
        <NotFound>
 
