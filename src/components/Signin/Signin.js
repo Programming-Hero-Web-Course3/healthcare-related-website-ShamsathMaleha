@@ -80,7 +80,7 @@ const Signin = () => {
     <p className="mt-2 text-danger">{error}</p>
    <button type="submit" className="buttons">Sign in</button>
 </form>
-<button onClick={handleGoogleLogin} className="btn btn-warning btn-lg btn-block mb-3 mx-3 text-white">Google <img src={google} width="20px " alt="" srcset="" /></button>
+<button onClick={handleGoogleLogin} className="btn btn-warning btn-lg btn-block mb-3 mx-3 text-white"> <img src={google} width="20px " alt="" srcset="" /></button>
 
 <br />
    <Link to="/register">Create account</Link>
