@@ -12,6 +12,7 @@ import AuthProvider from './components/context/AuthProvider';
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Details from './components/Details/Details';
+import ThankYou from './components/ThankYou/ThankYou';
 // import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
@@ -52,6 +53,11 @@ function App() {
         <Details>
 
         </Details>
+       </Route>
+       <Route exact path="/thankYou">
+        <ThankYou>
+
+        </ThankYou>
        </Route>
        <Route path="*">
        <NotFound>

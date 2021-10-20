@@ -1,7 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './Appointment.css'
 
 const Appointment = () => {
+    const history = useHistory();
+    const handleButton =()=>{
+        history.push('/thankYou')
+    }
     return (
         <div  className="d-flex justify-content-center h-75 mb-5 mt-5 pt-5 pb-5 appointment">
              <form >
@@ -33,7 +38,7 @@ const Appointment = () => {
 </div>
 
 
-<button type="submit" className="btn btn-success btn-lg btn-block">Make Appointment</button>
+<button type="submit" onClick={handleButton} className="btn btn-success btn-lg btn-block">Make Appointment</button>
 
 </form>
 

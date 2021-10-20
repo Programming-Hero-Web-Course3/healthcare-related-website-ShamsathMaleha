@@ -10,56 +10,18 @@ const useFirebase =()=>{
     const [user, setUser]= useState({});
     const [error, setError]= useState('');
     const [email, setEmail]= useState('');
-    
     const [password, setPassword]= useState('');
     const [loading, setLoading] = useState(true)
-   
+    const history = useHistory();
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
-
-    // email and password 
-
-    const handleregistration = e =>{
-        e.preventDefault()
-          if(password.length< 6){
-              setError('Password Must be 6 Character long')
-              return;
-          }
-        
-        else {
-          registerNewUser(email,password)
-        }
-      }
-
-      const registerNewUser = (email, password)=>{
-   
-        createUserWithEmailAndPassword(auth,email, password)
-        .then(result=>{
-            const user = result.user;
-            setError('')
-           
-            })   
-    
-       .catch(error=>{
-           setError(error.message)
-       })
-      }
-
-
-    
-
-
-
 
 
     const handleEmail = e => {
         console.log(e.target.value);
         setEmail(e.target.value);
     }
-    // const handleName = e => {
-    //     console.log(e.target.value);
-    //     setName(e.target.value);
-    // }
+  
     const handlePassword = e => {
         console.log(e.target.value);
         setPassword(e.target.value);
@@ -71,11 +33,7 @@ const useFirebase =()=>{
     setError(error.message)
 })
     .finally(()=>{setLoading(false)});
-    // .then((result) => {
-    //    setUser (result.user);
-    //    console.log(result.user)
-//   })
- 
+  
   }
 
   const logOut = ()=>{
@@ -116,9 +74,11 @@ const useFirebase =()=>{
       user,
       error,
       loading,
-      handleregistration,
       email,
       password,
+      setUser,
+      setError,
+     
       signInUsingGoogle,
       handlePassword,
       handleEmail,

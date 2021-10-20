@@ -15,8 +15,8 @@ const Doctor = (props) => {
     return (
         <div className="doctor-card">
             <Col>
-      <Card className="doctor-col">
-        <Card.Img variant="top" src={img} />
+      <Card className="images" >
+        <Card.Img variant="top "  src={img} />
         <Card.Body>
           <Card.Title> <h1>{name}</h1> </Card.Title>
           <Card.Text>

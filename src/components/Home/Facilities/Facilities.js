@@ -2,7 +2,7 @@ import React from 'react';
 import './Facilities.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRocket, faHeart, faUsers, faHandHoldingMedical } from '@fortawesome/free-solid-svg-icons'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 const hours = <FontAwesomeIcon icon={faRocket} />
 const care = <FontAwesomeIcon icon={faHeart} />
@@ -14,44 +14,42 @@ const Facilities = () => {
             
             <h1 className="top-facilities mt-5">Our Latest Facilities</h1>
             
-            <Container>
-           <Row xs={1} md={2} lg={3} className="g-5 justify-content-md-center">
-            <Col>
-            <div className="facilities-content mt-5" >
+           
+            <div className="container" >
 
-                <div>
+                <div className="row">
+                <div className="images col-sm-12 col-lg-3">
                     <span className="icon">{hours}</span>
-                    <h3>24/7</h3>
-                    <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+                    <h3 className="text-facilities">24/7</h3>
+                    <p className="text-start">Square Hospital Emergency Room (ER) provides non-stop life-saving care when required, 24 hours a day, seven days a week. ER has got all the life saving support </p>
   
                 </div>
-                <div>
+                <div className=" images col-sm-12 col-lg-3">
                 <span className="icon">{care}</span>
-                    <h3>Intensive Care</h3>
-                    <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+                    <h3 className="text-facilities">Intensive Care</h3>
+                    <p className="text-start">The ICU is concerned with the provision of life support or organ support system in patient who critically ill and who usually require intensive monitoring .</p>
   
                 </div>
-                <div>
+                <div className="images col-sm-12 col-lg-3">
                 <span className="icon">{family}</span>
-                    <h3>Family Planning</h3>
-                    <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+                    <h3 className="text-facilities">Family Planning</h3>
+                    <p className="text-start">Our Centre has an experienced team of doctors, nurses, embryologist and technicians trained in Singapore and India. We fully understand the needs of individual .</p>
   
                 </div>
-                <div>
+                <div className="images col-sm-12 col-lg-3">
                 <span className="icon">{emergency}</span>
-                    <h3>Emergency</h3>
-                    <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+                    <h3 className="text-facilities">Emergency</h3>
+                    <p className="text-start">We provide emergency care for respiratory disorders septicemia, and trauma including sports injuries, pediatric problems of the gastrointestinal system </p>
   
                 
                 </div>
+                </div>
             </div>
-            </Col>
-            </Row>
             
-            </Container>
         </div>
 
     );
 };
 
 export default Facilities;
+

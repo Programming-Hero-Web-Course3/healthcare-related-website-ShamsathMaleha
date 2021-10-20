@@ -1,10 +1,15 @@
 
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import './Contact.css'
 
 
 const Contact = () => {
+    const history = useHistory();
+    const handleButton =()=>{
+        history.push('/thankYou')
+    }
     return (
       
 <div className="container mb-4 contact mt-5">
@@ -69,7 +74,7 @@ const Contact = () => {
             </Container>
 
             <div className="text-center text-md-left">
-                <button className="btn btn-success ">Send</button>
+                <button onClick={handleButton} className="btn btn-success ">Send</button>
             </div>
             <div className="status"></div>
         </div>

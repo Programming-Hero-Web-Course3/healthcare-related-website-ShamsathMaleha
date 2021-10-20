@@ -8,7 +8,7 @@ import './Services.css'
 const Services = () => {
     const [services, setServices] =useState([])
     useEffect(()=>{
-        fetch('./service.json')
+        fetch('/service.json')
         .then(res=>res.json())
         .then(data=>setServices(data))
         
@@ -19,7 +19,7 @@ const Services = () => {
             <div className="text-white mb-5 ">
              
             <h1 >Our Offered Services</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Voluptas est quam itaque, fuga rem eveniet fugit architecto illum aliquid perferendis ab suscipit minima labore eos culpa libero voluptatum? Ipsum, error.</p>
+            <p>Medi Care Hospitals Limited is a tertiary care hospital and the leading contributor <br /> of private healthcare services in Bangladesh. This has been achieved <br /> only through consistent commitment to improve the lives of people through utmost service excellence </p>
             </div>
          
             <Container>

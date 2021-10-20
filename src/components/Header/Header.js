@@ -35,6 +35,7 @@ const Header = () => {
       {
         user?.email ||<Nav.Link as={HashLink} to="/register" className="header-button">Sign up {signUp}</Nav.Link>
       }
+    
      {
          user?.email && <button   onClick={logOut}  className="header-button">Sign out {signUp}</button>
 

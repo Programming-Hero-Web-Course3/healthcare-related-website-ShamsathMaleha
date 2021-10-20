@@ -7,7 +7,7 @@ import './Doctors.css'
 const Doctors = () => {
     const [doctors, setDoctors] =useState([])
     useEffect(()=>{
-        fetch('./doctor.json')
+        fetch('/doctor.json')
         .then(res=>res.json())
         .then(data=>setDoctors(data))
         
@@ -18,7 +18,7 @@ const Doctors = () => {
             <div className=" mb-5 ">
              
             <h1 >Our Consultants</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Voluptas est quam itaque, fuga rem eveniet fugit architecto illum aliquid perferendis ab suscipit minima labore eos culpa libero voluptatum? Ipsum, error.</p>
+            <p> We doctor provide extensive knowledge in the domain of medical science,<br /> who applies and dedicates his knowledge to identify the medical problem faced  <br /> by the patient and then uses his skill to prevent or cure it.</p>
             </div>
          
             <Container>

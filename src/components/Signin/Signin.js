@@ -29,20 +29,7 @@ const Signin = () => {
     const auth = getAuth();
 
           
-    const processLogin=(email,password)=>{
-    //     setLoading(true)
-    //     signInWithEmailAndPassword(auth, email, password)
-    //     .then(result=>{
-    //       setUser(result.user);
-    //       console.log(user)
-    //       setError('')
-    //     })
-    //     .catch(error=>{
-    //       setError(error.message)
-    //       console.log(error.message)
-    //   })
-    //   .finally(()=>{setLoading(false)});
-      }
+    
    
     const signInWithEmail = e =>{
        
@@ -50,7 +37,20 @@ const Signin = () => {
             setError('Please at least 6 or more character as password')
         }
         else {
-
+            setLoading(true)
+            signInWithEmailAndPassword(auth, email,password)
+            .then(result=>{
+              setUser(result.user);
+              console.log(user)
+              setError('')
+              e.target.reset()
+              history.push(redirect_uri)
+            })
+            .catch(error=>{
+              setError(error.message)
+              console.log(error.message)
+          })
+          .finally(()=>{setLoading(false)})
         // processLogin(email,password)
      
     }
@@ -97,12 +97,12 @@ const Signin = () => {
   
   
                              
-<form onSubmit={handleEmailLogin}>
+<form onSubmit={signInWithEmail}>
     <h1>Log in</h1>
 <input onBlur={handleEmail} required type="email" name="email" className="mt-5 mb-3 mx-auto inputs" placeholder="Email" />
    
    <input required onBlur={handlePassword} type="password" className=" mx-auto inputs" name="Password" placeholder="Password" />
- 
+    <p className="mt-2 text-danger">{error}</p>
    <button type="submit" className="buttons">Sign in</button>
 </form>
 <button onClick={handleGoogleLogin} className="btn btn-warning btn-lg btn-block mb-3 mx-3 text-white">Google <img src={google} width="20px " alt="" srcset="" /></button>
