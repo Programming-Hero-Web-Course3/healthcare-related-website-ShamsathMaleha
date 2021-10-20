@@ -21,25 +21,25 @@ const Facilities = () => {
                 <div className="images col-sm-12 col-lg-3">
                     <span className="icon">{hours}</span>
                     <h3 className="text-facilities">24/7</h3>
-                    <p className="text-start">Square Hospital Emergency Room (ER) provides non-stop life-saving care when required, 24 hours a day, seven days a week. ER has got all the life saving support </p>
+                    <p className="text-center fw-light">Square Hospital Emergency Room (ER) provides non-stop life-saving care when required, 24 hours a day, seven days a week. ER has got all the life saving support </p>
   
                 </div>
                 <div className=" images col-sm-12 col-lg-3">
                 <span className="icon">{care}</span>
                     <h3 className="text-facilities">Intensive Care</h3>
-                    <p className="text-start">The ICU is concerned with the provision of life support or organ support system in patient who critically ill and who usually require intensive monitoring .</p>
+                    <p className="text-center fw-light">The ICU is concerned with the provision of life support or organ support system in patient who critically ill and who usually require intensive monitoring .</p>
   
                 </div>
                 <div className="images col-sm-12 col-lg-3">
                 <span className="icon">{family}</span>
                     <h3 className="text-facilities">Family Planning</h3>
-                    <p className="text-start">Our Centre has an experienced team of doctors, nurses, embryologist and technicians trained in Singapore and India. We fully understand the needs of individual .</p>
+                    <p className="text-center">Our Centre has an experienced team of doctors, nurses, embryologist and technicians trained in Singapore and India. We fully understand the needs of individual .</p>
   
                 </div>
                 <div className="images col-sm-12 col-lg-3">
                 <span className="icon">{emergency}</span>
                     <h3 className="text-facilities">Emergency</h3>
-                    <p className="text-start">We provide emergency care for respiratory disorders septicemia, and trauma including sports injuries, pediatric problems of the gastrointestinal system </p>
+                    <p className="text-center">We provide emergency care for respiratory disorders septicemia, and trauma including sports injuries, pediatric problems of the gastrointestinal system </p>
   
                 
                 </div>

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt , faClinicMedical} from '@fortawesome/free-solid-svg-icons'
 import useAuth from '../hooks/useAuth';
 
-
+ 
 
 const signUp = <FontAwesomeIcon icon={faSignInAlt} />
 const medic = <FontAwesomeIcon icon={faClinicMedical} />

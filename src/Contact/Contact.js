@@ -4,6 +4,13 @@ import { Container } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import './Contact.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faAddressCard, faMailBulk } from '@fortawesome/free-solid-svg-icons'
+
+
+const phone = <FontAwesomeIcon icon={faPhone} />
+const address = <FontAwesomeIcon icon={faAddressCard} />
+const email = <FontAwesomeIcon icon={faMailBulk} />
 
 const Contact = () => {
     const history = useHistory();
@@ -82,15 +89,15 @@ const Contact = () => {
         <div className="col-md-6 text-end">
             <ul className="list-unstyled mb-0">
                 <li><i className="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Uttara, Chourasta, Bangladesh</p>
+                    <p> <span className="icon-color">{address}</span> Uttara, Chourasta, Bangladesh</p>
                 </li>
 
                 <li><i className="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+ 01 234 567 89</p>
+                    <p> <span className="icon-color">{phone}</span> + 01 234 567 89</p>
                 </li>
 
                 <li><i className="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>medicareservices@gmail.com</p>
+                    <p> <span className="icon-color"> {email}</span>  medicareservices@gmail.com</p>
                 </li>
             </ul>
         </div>

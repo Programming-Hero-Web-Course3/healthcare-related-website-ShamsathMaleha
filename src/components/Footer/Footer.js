@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faAddressCard, faMailBulk  } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faAddressCard, faMailBulk} from '@fortawesome/free-solid-svg-icons'
 
 
 const phone = <FontAwesomeIcon icon={faPhone} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import './Signin.css';
-import google from '../../images/google/google.png'
+import google from '../../image/google/google.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 import useAuth from '../hooks/useAuth';

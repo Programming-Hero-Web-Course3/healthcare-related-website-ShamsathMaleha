@@ -1,7 +1,14 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendarCheck , faMoneyBill} from '@fortawesome/free-solid-svg-icons'
 import './Doctor.css'
+
+
+const appointment = <FontAwesomeIcon icon={faCalendarCheck} />
+const money = <FontAwesomeIcon icon={faMoneyBill} />
+
 
 const Doctor = (props) => {
     const {id,img,name,visit, speciality} = props.doctor
@@ -23,9 +30,9 @@ const Doctor = (props) => {
         <h4> {speciality} </h4>
           </Card.Text>
           <Card.Text>
-        Visit fee: {visit}.BDT
+        Visit fee: {visit} {money}
           </Card.Text>
-          <button onClick={handleAppointment} type="button" className="btn btn-success" >Appointment</button>
+          <button onClick={handleAppointment} type="button" className="btn btn-success" >Appointment {appointment}</button>
         </Card.Body>
       </Card>
     </Col>
