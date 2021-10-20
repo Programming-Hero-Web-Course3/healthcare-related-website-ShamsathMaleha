@@ -28,20 +28,15 @@ const Header = () => {
       <Nav.Link as= {HashLink} to="/contact">Contact</Nav.Link>
      
     </Nav>
-    <Nav>
-      { user?.email ||<Nav.Link as={HashLink} to="/login" >Login</Nav.Link>
-     
-      }
-      {
-        user?.email ||<Nav.Link as={HashLink} to="/register" className="header-button">Sign up {signUp}</Nav.Link>
-      }
-    
-     {
-         user?.email && <button   onClick={logOut}  className="header-button">Sign out {signUp}</button>
 
-     }
-      
-    </Nav>
+    {
+      user.email? <Nav><button   onClick={logOut}  className="header-button">Sign out {signUp}</button></Nav> :
+      <Nav>
+        <Nav.Link as={HashLink} to="/login" >Login</Nav.Link>
+        <Nav.Link as={HashLink} to="/register" className="header-button">Sign up {signUp}</Nav.Link>
+      </Nav>
+    }
+    
   </Navbar.Collapse>
   </Container>
 </Navbar>

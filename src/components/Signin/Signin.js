@@ -62,19 +62,21 @@ const Signin = () => {
     
 
     return (
-       
+       <>
 
 
 
-<div class="form">
-  
-  
+
+<div className="container " >
+<div className="form w-50">
+<div className="row d-flex justify-content-center"> 
+<div className="col-sm-12 col-lg-9 ">
                              
 <form onSubmit={signInWithEmail}>
     <h1>Log in</h1>
-<input onBlur={handleEmail} required type="email" name="email" className="mt-5 mb-3 mx-auto inputs" placeholder="Email" />
+<input onBlur={handleEmail} required type="email" name="email" className="mt-5 mb-3 mx-auto inputs w-100" placeholder="Email" />
    
-   <input required onBlur={handlePassword} type="password" className=" mx-auto inputs" name="Password" placeholder="Password" />
+   <input required onBlur={handlePassword} type="password" className=" mx-auto inputs w-100" name="Password" placeholder="Password" />
     <p className="mt-2 text-danger">{error}</p>
    <button type="submit" className="buttons">Sign in</button>
 </form>
@@ -83,9 +85,11 @@ const Signin = () => {
 <br />
    <Link to="/register">Create account</Link>
 
-      
+   </div> 
+   </div>
+ </div>  
 </div>
-
+</>
     );
 };
 

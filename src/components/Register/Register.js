@@ -40,15 +40,16 @@ const Register = () => {
 
 <div>
 
-<div class="form">
-  
-  
+<div className="container " >
+<div className="form w-50">
+<div className="row d-flex justify-content-center"> 
+<div className="col-sm-12 col-lg-12 ">
                              
   <form onSubmit={ handleRegistration }>
       <h1>Register</h1>
  
-  <input onBlur={handleEmail} required type="email" name="email" className=" mb-3 mx-auto inputs" placeholder="Email" /> 
-     <input onBlur={handlePassword} required type="password" className=" mx-auto inputs " name="Password" placeholder="Password" />
+  <input onBlur={handleEmail} required type="email" name="email" className=" mb-3 mx-auto w-100 inputs" placeholder="Email" /> 
+     <input onBlur={handlePassword} required type="password" className=" mx-auto inputs w-100 " name="Password" placeholder="Password" />
      <p className="mt-2 text-danger">{error}</p>
 
    
@@ -61,7 +62,9 @@ const Register = () => {
         
   </div>
 </div>
-
+</div>
+</div>
+</div>
     );
 };
 
