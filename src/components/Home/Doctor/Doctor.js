@@ -18,7 +18,7 @@ const Doctor = (props) => {
     const handleAppointment =()=>{
         history.push(uri)
     }
-
+  
     return (
         <div className="doctor-card">
             <Col>

@@ -25,7 +25,7 @@ const Service = (props) => {
          <button type="button" className="btn  btn-outline-secondary" onClick={handleDetails}>Details</button>
           </Card.Text>
         </Card.Body>
-      </Card>
+      </Card>  
     </Col>
         </div>
     );

@@ -15,7 +15,7 @@ const Carousal = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption >
-                    <h1 >We Care For Your health</h1>
+                    <h1 >We Care For Your healthy</h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1000}>

@@ -2,7 +2,7 @@ import React from 'react';
 import './Facilities.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRocket, faHeart, faUsers, faHandHoldingMedical } from '@fortawesome/free-solid-svg-icons'
-import { Card, Col, Container, Row } from 'react-bootstrap';
+
 
 const hours = <FontAwesomeIcon icon={faRocket} />
 const care = <FontAwesomeIcon icon={faHeart} />

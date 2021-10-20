@@ -2,17 +2,12 @@ import React from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import './Signin.css';
 import google from '../../image/google/google.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 import useAuth from '../hooks/useAuth';
-import { Form } from 'react-bootstrap';
 import {  getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import { useState } from 'react';
 
 
 
-
-const sign = <FontAwesomeIcon icon={faSignInAlt} />
 
 
 
@@ -51,7 +46,7 @@ const Signin = () => {
               console.log(error.message)
           })
           .finally(()=>{setLoading(false)})
-        // processLogin(email,password)
+        
      
     }
     e.preventDefault();
@@ -64,29 +59,7 @@ const Signin = () => {
                 
             })
     }
-    const handleEmailLogin = (e) => {
-        e.preventDefault();
-        // signInWithEmail(e.target.password)
-            // .then(result => {
-            //     history.push(redirect_uri);
-            // processLogin(e.target.email.value,e.target.password.value)
-            // })
-            setLoading(true)
-            signInWithEmailAndPassword(auth, email,password)
-            .then(result=>{
-              setUser(result.user);
-              console.log(user)
-              setError('')
-              e.target.reset()
-              history.push(redirect_uri)
-            })
-            .catch(error=>{
-              setError(error.message)
-              console.log(error.message)
-          })
-          .finally(()=>{setLoading(false)})
-            
-    }
+    
 
     return (
        

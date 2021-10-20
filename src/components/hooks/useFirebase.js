@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut} from "firebase/auth";
 import initializeAuthentication from '../Firebase/firebase.init';
-import { useHistory } from 'react-router-dom';
+
 
 initializeAuthentication();
 
@@ -12,7 +12,6 @@ const useFirebase =()=>{
     const [email, setEmail]= useState('');
     const [password, setPassword]= useState('');
     const [loading, setLoading] = useState(true)
-    const history = useHistory();
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
 
@@ -78,7 +77,6 @@ const useFirebase =()=>{
       password,
       setUser,
       setError,
-     
       signInUsingGoogle,
       handlePassword,
       handleEmail,

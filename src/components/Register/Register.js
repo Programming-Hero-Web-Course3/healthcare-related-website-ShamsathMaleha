@@ -32,7 +32,7 @@ const Register = () => {
        .catch(error=>{
            setError(error.message)
        })
-          // registerNewUser(email,password)
+         
         }
       }
     return (

@@ -18,7 +18,7 @@ const Services = () => {
         <div id="services" className="services-section pt-5 mt-5 ">
             <div className="text-white mb-5 ">
              
-            <h1 >Our Offered Services</h1>
+            <h1 >Our Offered<span className="texts-color"> Services</span></h1>
             <p>Medi Care Hospitals Limited is a tertiary care hospital and the leading contributor <br /> of private healthcare services in Bangladesh. This has been achieved <br /> only through consistent commitment to improve the lives of people through utmost service excellence </p>
             </div>
          
